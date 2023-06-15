@@ -1,4 +1,7 @@
 ## Livewire Range Slider
+<a href="https://packagist.org/packages/ysz/lw-range-slider"><img src="https://img.shields.io/packagist/v/ysz/lw-range-slider" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/ysz/lw-range-slider"><img src="https://img.shields.io/packagist/dt/ysz/lw-range-slider" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/ysz/lw-range-slider"><img src="https://img.shields.io/packagist/l/ysz/lw-range-slider" alt="License"></a>
 
 #### Inspired by https://github.com/jantinnerezo/livewire-range-slider, Please check it out!
 
