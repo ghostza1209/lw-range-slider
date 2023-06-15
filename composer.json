@@ -1,0 +1,34 @@
+{
+    "name": "ysz/lw-range-slider",
+    "description": "A simple noUiSlider blade component designed specifically for your Livewire Components.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "YsZ\\LwRangeSlider\\": "src"
+        }
+    },
+    "require": {
+        "php": ">=7.2.5",
+        "laravel/framework": "^8.0|^9.0",
+        "livewire/livewire": "^2.8.0"
+    },
+    "require-dev": {
+    },
+    "authors": [
+        {
+            "name": "Ysz"
+        }
+    ],
+    "minimum-stability": "dev",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "YsZ\\LwRangeSlider\\LwRangeSliderServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "lw-range-slider",
+  "version": "1.0.0",
+  "description": "An effortless blade component, noUiSlider, tailored for your Livewire Components.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npm run development",
+    "development": "mix",
+    "watch": "mix watch",
+    "hot": "mix watch --hot",
+    "prod": "npm run production",
+    "production": "mix --production"
+  },
+  "keywords": [],
+  "author": "YsZ",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^10.2.5",
+    "laravel-mix": "^6.0.6",
+    "nouislider": "^15.4.0",
+    "postcss": "^8.2.12"
+  }
+}
