@@ -4,8 +4,7 @@
         models: {!! json_encode($getWireModel($attributes)) !!},
         modifier: "{{ $getWireModelModifier($attributes) }}"
     })'
-    x-init="init()"
-    @focusout="getValue"
+    @focusout="setValue"
     {{ $attributes }}
     wire:ignore
 >
