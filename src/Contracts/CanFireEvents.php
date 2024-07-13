@@ -20,7 +20,7 @@ trait CanFireEvents
         float|int|null $maxRange = null
     ): void
     {
-        $this->emit(
+        $this->dispatch(
             EventName::PRICE_RANGE_CHANGED->value,
             $min,
             $max,

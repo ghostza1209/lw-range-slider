@@ -56,15 +56,15 @@ class LwRangeSlider extends Component
      */
     public function getWireModelModifier(ComponentAttributeBag $attributes)
     {
-        if ($attributes->wire('model')->hasModifier(Modifier::LAZY->toString())) {
-            return Modifier::LAZY->toString();
+        if ($attributes->wire('model')->hasModifier('blur')) {
+            return Modifier::BLUR->toString();
         }
 
-        if ($attributes->wire('model')->hasModifier(Modifier::DEFER->toString())) {
-            return Modifier::DEFER->toString();
+        if ($attributes->wire('model')->hasModifier('live')) {
+            return Modifier::LIVE->toString();
         }
 
-        return Modifier::EMPTY->toString();
+        return Modifier::DEFER->toString();
     }
 
     /**

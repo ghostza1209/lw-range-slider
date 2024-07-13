@@ -9,12 +9,12 @@ const CHANGE_EVENT = 'change';
 /**
  * @type {string}
  */
-const EMPTY_MODIFER = 'empty';
+const LIVE_MODIFER = 'live';
 
 /**
  * @type {string}
  */
-const LAZY_MODIFIER = 'lazy';
+const BLUR_MODIFIER = 'blur';
 
 /**
  *
@@ -31,7 +31,7 @@ window.LivewireRangeSlider = function (data) {
     return {
         rangeSlider: null,
         models: null,
-        modifier: EMPTY_MODIFER,
+        modifier: LIVE_MODIFER,
         handleHistory: null,
         init() {
             Livewire.on(PRICE_RANGE_CHANGED_EVENT, (min, max, minRange, maxRange) => {
@@ -55,14 +55,12 @@ window.LivewireRangeSlider = function (data) {
             );
         },
         handleUpdate(values, handle) {
-            if (this.models && this.modifier !== LAZY_MODIFIER) {
-                this.$wire.set(
-                    this.models, values, this.isDeferred()
-                );
+            if (this.models && this.modifier !== BLUR_MODIFIER) {
+                this.$wire.set(this.models, values, this.isDeferred());
             }
         },
-        isLazy() {
-            return this.modifier === LAZY_MODIFIER;
+        isBlur() {
+            return this.modifier === BLUR_MODIFIER;
         },
         isDeferred() {
             return this.modifier === DEFER_MODIFIER;
@@ -70,7 +68,7 @@ window.LivewireRangeSlider = function (data) {
         setValue() {
             var model = this.models ?? false;
 
-            if (this.isLazy() && model) {
+            if (this.isBlur() && model) {
                 this.$wire.set(model, this.rangeSlider.get());
             }
         },

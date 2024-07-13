@@ -31,11 +31,11 @@ Register the script component to template after the ``@livewireScripts``
 
 This package is designed to be used in conjunction with [Livewire](https://laravel-livewire.com/) components. Please ensure that you exclusively utilize it within Livewire projects.
 
-- PHP 7.4 or higher
+- PHP 8.1 or higher
 
-- Laravel 8 and 9
+- Laravel 10.x or higher
 
-- [Livewire](https://laravel-livewire.com/)
+- [Livewire ^3.0](https://laravel-livewire.com/)
 
 - [Alpine](https://alpinejs.dev)
 
@@ -75,26 +75,26 @@ The `$options` property represents the [noUiSlider options](https://refreshless.
 The `$sliderValues` property is the model for the range slider values.
 
 
-#### Livewire's default `wire:model` attribute
+### Livewire's default `wire:model` attribute
+
+```html
+<x-range-slider :options="$options" wire:model.live="sliderValues" />
+```
+
+### Deferred Updating
+
+In cases where you don't need data updates to happen live, you can remove all modifiers to batch data updates with the next network request.
 
 ```html
 <x-range-slider :options="$options" wire:model="sliderValues" />
 ```
 
-### Deferred Updating
-
-In cases where you don't need data updates to happen live, we have a `.defer` modifier that batches data updates with the next network request.
-
-```html
-<x-range-slider :options="$options" wire:model.defer="sliderValues" />
-```
-
 ### Lazy Updating
 
-You can also use `.lazy` modifier to update the data after the user has finished interacting with the slider.
+You can also use `.blur` modifier to update the data after the user has finished interacting with the slider.
 
 ```html
-<x-range-slider :options="$options" wire:model.lazy="sliderValues" />
+<x-range-slider :options="$options" wire:model.blur="sliderValues" />
 ```
 
 ### Emitting events

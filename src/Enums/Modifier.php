@@ -4,8 +4,8 @@ namespace YsZ\LwRangeSlider\Enums;
 
 enum Modifier
 {
-    case EMPTY;
-    case LAZY;
+    case LIVE;
+    case BLUR;
     case DEFER;
 
     /**
