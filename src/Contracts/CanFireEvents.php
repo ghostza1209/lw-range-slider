@@ -22,10 +22,10 @@ trait CanFireEvents
     {
         $this->dispatch(
             EventName::PRICE_RANGE_CHANGED->value,
-            $min,
-            $max,
-            $minRange ?? $min,
-            $maxRange ?? $max
+            min: $min,
+            max: $max,
+            minRange: $minRange ?? $min,
+            maxRange: $maxRange ?? $max
         );
     }
 }
