@@ -34,7 +34,7 @@ window.LivewireRangeSlider = function (data) {
         modifier: LIVE_MODIFER,
         handleHistory: null,
         init() {
-            Livewire.on(PRICE_RANGE_CHANGED_EVENT, (min, max, minRange, maxRange) => {
+            Livewire.on(PRICE_RANGE_CHANGED_EVENT, ({min, max, minRange, maxRange}) => {
                 this.rangeSlider.updateOptions({
                     range: {
                         min: minRange,
