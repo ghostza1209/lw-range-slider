@@ -5,9 +5,8 @@ namespace YsZ\LwRangeSlider;
 use Illuminate\Support\Str;
 use Illuminate\View\Component;
 use Illuminate\View\ComponentAttributeBag;
-use Jantinnerezo\LivewireRangeSlider\Exceptions\RangeSliderException;
-use Livewire\WireDirective;
 use YsZ\LwRangeSlider\Enums\Modifier;
+use YsZ\LwRangeSlider\Exceptions\RangeSliderException;
 
 class LwRangeSlider extends Component
 {
@@ -17,11 +16,11 @@ class LwRangeSlider extends Component
      * @return void
      */
     public function __construct(
-        private int|float $minVal,
-        private int|float $maxVal,
-        private array     $options = [],
-        private int|float $minRange = 0,
-        private int|float $maxRange = 0,
+        public int|float $minVal,
+        public int|float $maxVal,
+        public array     $options = [],
+        public int|float $minRange = 0,
+        public int|float $maxRange = 0,
     )
     {
         if(!$this->minRange) {

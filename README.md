@@ -33,7 +33,7 @@ This package is designed to be used in conjunction with [Livewire](https://larav
 
 - PHP 8.1 or higher
 
-- Laravel 10.x or higher
+- Laravel 10.x, 11.x, or 12.x
 
 - [Livewire ^3.0](https://laravel-livewire.com/)
 

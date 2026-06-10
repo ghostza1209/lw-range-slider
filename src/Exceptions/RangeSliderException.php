@@ -2,18 +2,11 @@
 
 namespace YsZ\LwRangeSlider\Exceptions;
 
-class RangeSliderException
+use Exception;
+
+class RangeSliderException extends Exception
 {
-    protected $message;
-
-    public function __construct($message)
-    {
-        $this->message = $message;
-
-        parent::__construct();
-    }
-
-    public function __toString()
+    public function __toString(): string
     {
         return "Livewire Range Slider Component Exception: {$this->message}";
     }
